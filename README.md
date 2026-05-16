@@ -9,7 +9,8 @@ A chat-based AI layout agent that lets you transform design JSON using natural l
 ## Setup
 
 ### 1. Clone the repo
-git clone <your-repo-url>
+git clone [https://github.com/Soniya-321/Chat-based-layout-agent.git](https://github.com/Soniya-321/Chat-based-layout-agent.git)
+
 cd layout-agent
 
 ### 2. Backend
