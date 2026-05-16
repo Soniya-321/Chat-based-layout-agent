@@ -15,13 +15,18 @@ cd layout-agent
 
 ### 2. Backend
 cd server
+
 npm install
+
 cp .env.example .env        # then add your API key inside
+
 npm run dev
 
 ### 3. Frontend (new terminal)
 cd client
+
 npm install
+
 npm run dev
 
 ### 4. Open the app
