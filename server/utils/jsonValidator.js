@@ -1,4 +1,3 @@
-// server/utils/jsonValidator.js
 export function validateLayout(layout) {
   if (!layout) throw new Error('Layout is null');
   if (!Array.isArray(layout.rootNodes)) throw new Error('rootNodes must be array');
