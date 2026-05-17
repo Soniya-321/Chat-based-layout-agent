@@ -12,39 +12,34 @@ router.post('/', async (req, res) => {
   }
 
   try {
-    // Only use last 2 messages for context — saves tokens significantly
-    const trimmedHistory = history.slice(-2);
-
-    const result = await callLLM(layout, trimmedHistory, message);
-
+    const result = await callLLM(layout, history.slice(-2), message);
     validateLayout(result.updatedLayout);
 
     return res.json({
-      explanation: result.explanation || 'Layout updated!',
-      updatedLayout: result.updatedLayout
+      explanation:   result.explanation || 'Layout updated!',
+      updatedLayout: result.updatedLayout,
     });
 
   } catch (err) {
     console.error('❌ Chat route error:', err.message);
 
-    if (err instanceof SyntaxError) {
+    if (err instanceof SyntaxError || err.message?.includes('invalid JSON')) {
       return res.status(500).json({
-        explanation: 'The AI returned malformed JSON. Please try again.',
-        updatedLayout: layout
+        explanation:   'AI returned malformed JSON. Please try again.',
+        updatedLayout: layout,
       });
     }
 
-    // Handle token limit errors specifically
-    if (err.message?.includes('413') || err.message?.includes('rate_limit')) {
+    if (err.message?.includes('rate_limit') || err.status === 429) {
       return res.status(429).json({
-        explanation: 'Request too large. Try a simpler instruction.',
-        updatedLayout: layout
+        explanation:   '⏳ Rate limit reached. Please wait a moment and try again.',
+        updatedLayout: layout,
       });
     }
 
     return res.status(500).json({
-      explanation: 'Something went wrong. Please try again.',
-      updatedLayout: layout
+      explanation:   'Something went wrong. Please try again.',
+      updatedLayout: layout,
     });
   }
 });
