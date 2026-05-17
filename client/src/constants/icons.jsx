@@ -1,3 +1,22 @@
+export const LogoIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="white"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="w-4 h-4"
+  >
+    <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/>
+    <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/>
+    <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/>
+  </svg>
+
+);
+
 export const SendIcon = ({ disabled }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -13,6 +32,25 @@ export const SendIcon = ({ disabled }) => (
   >
     <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.112z"/>
     <path d="m21.854 2.147-10.94 10.939"/>
+  </svg>
+);
+
+export const ResetBtnIcon = () => (
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.5 2v6h6" stroke="#64748b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M2.5 8C4.5 4.5 8 2 12 2a10 10 0 1 1-9.5 13" stroke="#64748b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+export const LeftArrowIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M9 2L4 7L9 12" stroke="#64748b" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>  
+  </svg>
+);
+
+export const RightArrowIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M5 2L10 7L5 12" stroke="#64748b" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 

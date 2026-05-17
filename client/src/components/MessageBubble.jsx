@@ -9,7 +9,7 @@ export default function MessageBubble({ role, content }) {
 
       {/* AI avatar — light gray bg, dark icon */}
       {!isUser && (
-        <div className="h-8 w-8 flex items-center justify-center rounded-lg bg-slate-100 flex-shrink-0 mb-0.5">
+        <div className="h-8 w-8 flex items-center justify-center rounded-lg bg-slate-200 flex-shrink-0 mb-0.5">
           <SparkleIcon />
         </div>
       )}
@@ -18,7 +18,7 @@ export default function MessageBubble({ role, content }) {
       <div className={`max-w-[78%] px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap break-words
         ${isUser
           ? 'bg-slate-700 text-white rounded-2xl rounded-tr-sm'
-          : 'bg-slate-100 text-slate-800 rounded-2xl rounded-tl-sm shadow-sm'
+          : 'bg-slate-200 text-slate-800 rounded-2xl rounded-tl-sm shadow-sm'
         }`}
       >
         {content}

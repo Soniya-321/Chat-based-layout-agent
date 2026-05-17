@@ -24,10 +24,10 @@ export default function DesignPanel({ layout }) {
               <button
                 key={id}
                 onClick={() => setView(id)}
-                className={`flex items-center text-sm font-bold gap-1.5 px-3 py-1 rounded-lg text-[13px] transition-all cursor-pointer
+                className={`flex items-center text-xs font-bold gap-1.5 px-3 py-1 rounded-lg text-[13px] transition-all cursor-pointer
                   ${active
                     ? 'bg-white text-slate-800 font-medium shadow-sm'
-                    : 'bg-transparent border border-transparent text-slate-400 font-normal'
+                    : 'bg-transparent border border-transparent text-slate-500 font-normal'
                   }`}
               >
                 <Icon active={active} />
